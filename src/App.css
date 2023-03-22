@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: block;
+  border: 1px #61dafb;
 }
 
 .App-logo {
@@ -26,6 +28,41 @@
 
 .App-link {
   color: #61dafb;
+}
+.scroll {
+  overflow: scroll;
+  height: 300px;
+  width: 400px;
+  font-size: 10px;
+}
+
+.button {
+  background-color: #8F1562;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 @keyframes App-logo-spin {

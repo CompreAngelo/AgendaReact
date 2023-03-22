@@ -1,22 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import Lista from './Componentes/lista.js';
+import { Formulario } from './Componentes/insertar';
+import React, { useState } from 'react';
+
+
 
 function App() {
+  const [Dato, setDatos] = useState([])
+  async function ConseguirDatos () {
+    const Resultado = await Lista()
+
+    setDatos(Resultado)
+  }
+
   return (
+    
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Agregar un contacto.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <Formulario Refresh={ConseguirDatos}></Formulario>
+        <br></br>
+        <p>
+          Lista de Contactos:
+        </p>
+        <Lista></Lista>
       </header>
     </div>
   );
